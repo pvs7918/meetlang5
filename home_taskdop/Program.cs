@@ -39,14 +39,9 @@ int end = 100;
 int[] array = new int[N];
 array = NewArray(array, begin, end);
 Console.Write("На какое количество элементов сдвинуть массив: ");
-int srcShift = Convert.ToInt32(Console.ReadLine());
-int shift = srcShift;
-/*if (shift > array.Length)
-{
-    shift %= array.Length;
-}*/
+int shift = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Исходный массив:");
 Console.WriteLine("[" + string.Join(", ", array) + "]");
-Console.WriteLine($"Массив после сдвига на {srcShift} элемента: ");
+Console.WriteLine($"Массив после сдвига на {shift} элемента: ");
 Console.WriteLine("[" + string.Join(", ", ShiftArray(array, shift)) + "]");
